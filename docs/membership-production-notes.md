@@ -21,13 +21,12 @@
 
 ## 推奨構成
 
-最短で進めるなら、Netlifyと相性の良い次の構成が現実的です。
+最短で進めるなら、現在のGitHub Pages公開を活かしつつ、認証と会員データだけ外部サービスに持たせる構成が現実的です。
 
 ```text
-Netlify Hosting
+GitHub Pages Hosting
 Supabase Auth
 Supabase Database
 ```
 
 記事は最初は `content/articles.js` 管理で始め、会員数が増えたらCMSやDBへ移行できます。
-

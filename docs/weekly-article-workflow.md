@@ -11,14 +11,15 @@
 3. 画像がある場合は `assets/` に追加する
 4. `id` はURLになるので半角英数字とハイフンにする
 5. ブラウザで記事一覧と詳細ページを確認する
-6. Netlifyの固定プロジェクトへデプロイする
+6. GitにコミットしてGitHubへpushする
+7. GitHub Pagesのデプロイ完了後、公開URLで確認する
 
 ## URLの考え方
 
 記事URLは次の形式です。
 
 ```text
-https://固定サイトURL/#article/{article-id}
+https://china0630-lab.github.io/preflop-poker-members/#article/{article-id}
 ```
 
 サイト本体のURLは固定し、記事だけを追加していきます。

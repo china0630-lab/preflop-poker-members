@@ -94,12 +94,12 @@ function renderHome() {
       <div>
         <span>Membership</span>
         <strong>ログイン・招待コード登録</strong>
-        <small>本番ではNetlify Identity/Supabaseへ差し替え可能</small>
+        <small>本番ではSupabase Authなどへ差し替え可能</small>
       </div>
       <div>
         <span>Stable URL</span>
-        <strong>Netlifyプロジェクトで固定URL化</strong>
-        <small>DropではなくGit連携/CLI deployで同じURLを維持</small>
+        <strong>GitHub Pagesで固定URL化</strong>
+        <small>毎週の記事更新後も同じURLを維持</small>
       </div>
     </section>
 
