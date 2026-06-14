@@ -74,7 +74,7 @@ async function buildSupabaseSession(user) {
 
 async function fetchMemberProfile(userId) {
   const { data, error } = await supabaseClient
-    .from("profiles")
+    .from("preflop_profiles")
     .select("membership_status, plan")
     .eq("id", userId)
     .maybeSingle();
@@ -439,7 +439,7 @@ async function handleSupabaseAuth({ isLogin, email, password, invite, message })
     return;
   }
 
-  const claimResult = await supabaseClient.rpc("claim_invite_code", { invite_code_input: invite });
+  const claimResult = await supabaseClient.rpc("claim_preflop_invite_code", { invite_code_input: invite });
   if (claimResult.error) {
     await supabaseClient.auth.signOut();
     currentSession = null;
@@ -458,7 +458,7 @@ async function claimPendingInvite(user) {
   const profile = await fetchMemberProfile(user.id);
   if (profile && profile.membership_status !== "inactive") return;
 
-  const { error } = await supabaseClient.rpc("claim_invite_code", { invite_code_input: invite });
+  const { error } = await supabaseClient.rpc("claim_preflop_invite_code", { invite_code_input: invite });
   if (error) console.warn("Failed to claim pending invite", error);
 }
 

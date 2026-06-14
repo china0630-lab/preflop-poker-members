@@ -6,8 +6,8 @@ Supabase設定を入れると、会員登録とログイン情報はSupabase Aut
 Supabase未設定時だけ、フロントエンドの簡易実装にフォールバックします。
 
 - ユーザー情報: Supabase Auth
-- 招待コード: Supabase `invite_codes`
-- 会員状態: Supabase `profiles.membership_status`
+- 招待コード: Supabase `preflop_invite_codes`
+- 会員状態: Supabase `preflop_profiles.membership_status`
 
 セットアップ手順は `docs/supabase-member-management.md` を参照してください。
 
@@ -24,7 +24,7 @@ Supabase未設定時だけ、フロントエンドの簡易実装にフォール
 
 - サーバー側のユーザー管理: Supabase Authで対応
 - パスワードの安全な保存: Supabase Authで対応
-- 招待コードのサーバー側検証: `claim_invite_code` で対応
+- 招待コードのサーバー側検証: `claim_preflop_invite_code` で対応
 - 会員限定コンテンツのサーバー側保護
 - パスワード再設定
 - 管理者による招待コード発行
